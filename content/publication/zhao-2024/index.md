@@ -31,6 +31,7 @@ abstract: High-frequency and accurate state estimation is crucial for biped robo
   quantitative result among other LIO-based methods and biped robot state estimation
   algorithms. The dataset and source code will be available at https://github.com/Mr-Zqr/LIKO.
 links:
-- name: URL
-  url: http://arxiv.org/abs/2404.18047
+url_pdf: http://arxiv.org/abs/2404.18047
+url_code: 'https://github.com/Mr-Zqr/LIKO'
+url_dataset: ''
 ---
