@@ -42,14 +42,15 @@ sections:
       title: Biography
       # Choose a user profile to display (a folder name within `content/authors/`)
       username: admin
-  - block: skills
-    content:
-      title: Skills
-      text: ''
-      # Choose a user to display skills from (a folder name within `content/authors/`)
-      username: admin
-    design:
-      columns: '1'
+  
+  # - block: skills
+  #   content:
+  #     title: Skills
+  #     text: ''
+  #     # Choose a user to display skills from (a folder name within `content/authors/`)
+  #     username: admin
+  #   design:
+  #     columns: '1'
   # - block: experience
   #   content:
   #     title: Experience
@@ -160,10 +161,10 @@ sections:
   - block: collection
     content:
       title: Publications
-      text: |-
-        {{% callout note %}}
-        Quickly discover relevant content by [filtering publications](./publication/).
-        {{% /callout %}}
+      # text: |-
+      #   {{% callout note %}}
+      #   Quickly discover relevant content by [filtering publications](./publication/).
+      #   {{% /callout %}}
       filters:
         folders:
           - publication
@@ -235,7 +236,7 @@ sections:
   #         - event
   #   design:
   #     columns: '2'
-      view: compact
+      # view: compact
 
 #################################################      
   # - block: tag_cloud
@@ -250,8 +251,6 @@ sections:
     content:
       title: Contact
       subtitle:
-      text: |-
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam mi diam, venenatis ut magna et, vehicula efficitur enim.
       # Contact (add or remove contact options as necessary)
       email: qingray.zhao[AT]gmail.com
       # phone: 888 888 88 88
@@ -294,6 +293,6 @@ sections:
     #     netlify:
     #       # Enable CAPTCHA challenge to reduce spam?
     #       captcha: false
-    # design:
-    #   columns: '2'
+    design:
+      columns: '2'
 ---
