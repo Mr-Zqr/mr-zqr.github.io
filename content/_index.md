@@ -159,8 +159,9 @@ sections:
   #     columns: '2'
 #################################################
   - block: collection
+    id: publication
     content:
-      title: Publications
+      title: Publication
       # text: |-
       #   {{% callout note %}}
       #   Quickly discover relevant content by [filtering publications](./publication/).
