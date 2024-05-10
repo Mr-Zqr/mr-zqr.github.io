@@ -21,7 +21,7 @@ role: Master's student
 
 # Organizations/Affiliations to show in About widget
 organizations:
-  - name: Beijing Institute of Technology
+  - name: Beijing Institute of Technology, Beijing, China
     url: https://english.bit.edu.cn/
 
 # Short bio (displayed in user profile at end of posts)
