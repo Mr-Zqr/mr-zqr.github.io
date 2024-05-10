@@ -1,6 +1,6 @@
 ---
 title: Cube Pusher
-summary: This is a tiny robot designed as a class project. It is designed to fit into a competition and find wooden cubes and push them onto opposite colors on the ground. I was responsible for designing the structure of robots using SolidWorks and 3D printing, and for designing microcontroller expansion boards using Altium Designer to simplify electrical connections. We achieved second place in the final competition.
+summary: This is a tiny robot designed as a class project. It is designed to fit into a competition and find wooden cubes and push them onto opposite colors on the ground. We used 3D print for its body parts, An Arduino and a Raspberry Pi for control. We achieved second place in the final competition.
 
 date: "2022"
 
