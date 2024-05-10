@@ -50,7 +50,7 @@ sections:
       title: News
       text: |-
         {{% spoiler text="2024/01: First paper accepted by ICRA2024! 🎉" %}}
-        Paper "[LIKO: LiDAR, Inertial, and Kinematic Odometry for Bipedal Robots]({{< relref "/publication/zhao-2024/_index.md" >}})" This is my first academic paper and I cannot wait to go to Yokohama!
+        Our paper "[LIKO: LiDAR, Inertial, and Kinematic Odometry for Bipedal Robots]({{< relref "/publication/zhao-2024/_index.md" >}})" accepted by ICRA 2024 for oral presentation! This is my first academic paper and I cannot wait to go to Yokohama!
         {{% /spoiler %}}
     design:
       columns: '2'
