@@ -18,6 +18,9 @@ sections:
     content:
       title: News
       text: |-
+        {{% spoiler text="2024/06: One co-authered paper accepted by IROS2024, nice work guys!" %}}        
+        {{% /spoiler %}}
+
         {{% spoiler text="2024/05: Had a great time at ICRA2024, Yokohama, Japan ;)" %}}
         ![me at ICRA 2024](202405_icra2024.jpg "Me at ICRA 2024")
         {{% /spoiler %}}
@@ -71,7 +74,7 @@ sections:
         - icon: twitter
           icon_pack: fab
           name: DM Me
-          link: 'https://twitter.com/qingruizhao1'
+          link: 'https://twitter.com/zzqqrrr'
         - icon: image
           icon_pack: fas
           name: My photo blog
