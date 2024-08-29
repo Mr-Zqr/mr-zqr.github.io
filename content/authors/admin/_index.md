@@ -37,10 +37,10 @@ education:
   courses:
     - course: MEng in Mechanical Engineering
       institution: Beijing Institute of Technology, Beijing
-      year: 2022 - Now
+      year: 2022 - 2025
     - course: BSc in Mechatronical Engineering
       institution: Beijing Institute of Technology, Beijing
-      year: 2018-2022
+      year: 2018 - 2022
 
 # Social/Academic Networking
 # For available icons, see: https://docs.hugoblox.com/getting-started/page-builder/#icons
@@ -66,5 +66,5 @@ social:
 # Highlight the author in author lists? (true/false)
 highlight_name: true
 ---
-Hi there👋, I am a second-year Master's student at Beijing Institute of Technology (BIT). My research interest lies in enhancing the mobility and reliability of legged robots through robust perceptual algorithms and various sensor modalities. I also hold a vast interest in SLAM and mobile robots. 🤖
+Hi there👋, I am a third-year Master's student at Beijing Institute of Technology (BIT). My research interest lies in enhancing the mobility and reliability of legged robots through robust perceptual algorithms and various sensor modalities. I also hold a vast interest in SLAM and mobile robots. 🤖
 {style="text-align: justify;"}
