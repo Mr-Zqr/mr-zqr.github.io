@@ -66,5 +66,5 @@ social:
 # Highlight the author in author lists? (true/false)
 highlight_name: true
 ---
-Hi there👋, I am a third-year Master's student at Beijing Institute of Technology (BIT). My research interest lies in enhancing the mobility and reliability of legged robots through robust perceptual algorithms and various sensor modalities. I also hold a vast interest in SLAM and mobile robots. 🤖 I am actively looking for a PhD opportunity starting in Fall 2025, relating to legged robots.
+Hi there👋, I am a third-year Master's student at Beijing Institute of Technology (BIT). My research interest lies in enhancing the mobility and reliability of legged robots through robust perceptual algorithms and various sensor modalities. I also hold a vast interest in SLAM and mobile robots. 🤖 
 {style="text-align: justify;"}
