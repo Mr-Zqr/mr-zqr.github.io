@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ if not .IsHome }}{{ .Title }} | {{ end }}Qingrui Zhao</title>
+  <meta name="description" content="Qingrui Zhao — PhD student at Nanjing University. Research in perception for stable, athletic humanoid locomotion and embodied intelligence.">
+  {{ $css := resources.Get "css/academic.css" | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}">
+  {{ with resources.Get "media/icon.png" }}{{ $icon := .Resize "32x32" }}<link rel="icon" href="{{ $icon.RelPermalink }}">{{ end }}
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="masthead"><nav aria-label="Main navigation">
+  <a class="site-name" href="{{ "/" | relURL }}">Qingrui Zhao</a>
+  <div class="nav-links">
+    <a href="{{ "/" | relURL }}" {{ if .IsHome }}aria-current="page"{{ end }}>About</a>
+    <a href="{{ "/publications/" | relURL }}" {{ if eq .Type "publication" }}aria-current="page"{{ end }}>Publications</a>
+    <a href="{{ "/project/" | relURL }}" {{ if eq .Section "project" }}aria-current="page"{{ end }}>Projects</a>
+  </div>
+</nav></header>
+{{ $profile := site.GetPage "/authors/admin" }}
+<div class="site-layout">
+<aside class="profile" aria-label="About Qingrui Zhao">
+  {{ with $profile.Resources.GetMatch "avatar.jpg" }}
+    {{ $avatar := .Fill "400x400 Center" }}
+    <div class="avatar avatar-swap" tabindex="0" aria-label="Qingrui Zhao — hover or focus to reveal another portrait">
+      <img class="avatar-default" src="{{ $avatar.RelPermalink }}" width="160" height="160" alt="Qingrui Zhao">
+      {{ with $profile.Resources.GetMatch "portrait-hover.png" }}{{ $hover := .Resize "400x" }}<img class="avatar-hover" src="{{ $hover.RelPermalink }}" width="160" height="160" alt="" aria-hidden="true">{{ end }}
+    </div>
+  {{ end }}
+  <h2>Qingrui Zhao <span lang="zh">赵清锐</span></h2>
+  <p class="role">{{ $profile.Params.role }}</p>
+  <p><a href="https://www.nju.edu.cn/">Nanjing University</a></p>
+  <ul class="profile-links">
+    <li><a href="mailto:qingray.zhao@gmail.com">Email <span aria-hidden="true">↗</span></a></li>
+    <li><a href="https://scholar.google.com/citations?user=1yVdbOMAAAAJ&amp;hl=zh-CN">Google Scholar <span aria-hidden="true">↗</span></a></li>
+    <li><a href="https://github.com/Mr-Zqr">GitHub <span aria-hidden="true">↗</span></a></li>
+  </ul>
+</aside>
+<main id="main">
+{{ if .IsHome }}
+  <section id="about"><h1>About me</h1><div class="biography">{{ $profile.Content }}</div></section>
+  <section id="education"><h2>Education</h2><ul class="experience-list">
+    {{ range $profile.Params.education.courses }}<li><div class="experience-heading"><h3>{{ .course }}</h3><span class="date">{{ .year }}</span></div><p>{{ .institution }}</p></li>{{ end }}
+  </ul></section>
+  <section id="internship"><h2>Internship</h2><ul class="experience-list">
+    {{ range $profile.Params.internships }}<li><div class="experience-heading"><h3>{{ .role }}</h3><span class="date">{{ .dates }}</span></div><p><a href="{{ .url }}">{{ .company }}</a></p></li>{{ end }}
+  </ul></section>
+  <section id="publication"><div class="section-heading"><h2>Publications</h2><a href="{{ "/publications/" | relURL }}">View all →</a></div>{{ partial "academic/papers.html" . }}</section>
+  <section id="contact"><h2>Contact</h2><p><a href="mailto:qingray.zhao@gmail.com">qingray.zhao[AT]gmail.com</a></p></section>
+{{ else if and (eq .Type "publication") (not .IsPage) }}
+  <h1>Publications</h1><p>Also on <a href="https://scholar.google.com/citations?user=1yVdbOMAAAAJ&amp;hl=zh-CN">Google Scholar</a>.</p>
+  {{ partial "academic/papers.html" . }}
+{{ else if and (eq .Section "publication") .IsPage }}
+  <a class="back-link" href="{{ "/publications/" | relURL }}">← Publications</a>
+  <h1 class="paper-title">{{ .Title }}</h1>
+  <p class="authors">{{ partial "academic/authors.html" . }}</p>
+  {{ with .Params.author_notes }}<p class="section-note">* Equal contribution.</p>{{ end }}
+  <p class="venue">{{ .Params.publication | markdownify }} · {{ .Date.Format "2006" }}</p>
+  {{ partial "academic/links.html" . }}
+  {{ with .Resources.GetMatch "featured*" }}<img class="detail-image" src="{{ .RelPermalink }}" alt="Research overview">{{ end }}
+  <h2>Abstract</h2><p>{{ .Params.abstract }}</p>{{ .Content }}
+{{ else if eq .Section "project" }}
+  <h1>{{ if .IsPage }}{{ .Title }}{{ else }}Projects{{ end }}</h1>
+  {{ $projects := where site.RegularPages "Section" "project" }}
+  {{ if .IsPage }}{{ $projects = slice . }}{{ end }}
+  {{ range $projects.ByDate.Reverse }}
+  <article class="paper project">
+    {{ with .Resources.GetMatch "featured*" }}{{ $thumb := .Resize "440x" }}<img src="{{ $thumb.RelPermalink }}" width="{{ $thumb.Width }}" height="{{ $thumb.Height }}" alt="Project preview" loading="lazy">{{ end }}
+    <div><h3><a href="{{ .Params.external_link }}">{{ .Title }}</a></h3><p>{{ .Params.summary }}</p><a href="{{ .Params.external_link }}">Code ↗</a></div>
+  </article>{{ end }}
+{{ else }}<h1>{{ .Title }}</h1>{{ .Content }}{{ end }}
+<footer>© {{ now.Year }} Qingrui Zhao</footer>
+</main>
+</div>
+</body>
+</html>

@@ -1,0 +1,5 @@
+{{- range $i, $name := .Params.authors -}}
+  {{- if $i }}, {{ end -}}
+  {{- if eq $name "Qingrui Zhao" -}}<strong>{{ $name }}</strong>{{- else -}}{{ $name }}{{- end -}}
+  {{- with $.Params.author_notes -}}{{- with index . $i -}}<sup title="{{ . }}" aria-label="{{ . }}">*</sup>{{- end -}}{{- end -}}
+{{- end -}}

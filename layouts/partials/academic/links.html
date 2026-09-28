@@ -1,0 +1,7 @@
+<div class="paper-links">
+  {{ with .Params.url_pdf }}<a href="{{ . }}">PDF</a>{{ end }}
+  {{ with .Resources.GetMatch "cite.bib" }}<a href="{{ .RelPermalink }}">BibTeX</a>{{ end }}
+  {{ with .Params.url_code }}<a href="{{ . }}">Code</a>{{ end }}
+  {{ range .Params.links }}<a href="{{ .url }}">{{ .name }}</a>{{ end }}
+  {{ with .Params.doi }}<a href="https://doi.org/{{ . }}">DOI</a>{{ end }}
+</div>

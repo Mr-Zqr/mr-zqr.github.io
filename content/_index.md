@@ -13,25 +13,6 @@ sections:
       username: admin
 
 #################################################
-  - block: markdown
-    id: news
-    content:
-      title: News
-      text: |-
-        {{% spoiler text="2024/06: One co-authered paper accepted by IROS2024, nice work guys!" %}}        
-        {{% /spoiler %}}
-
-        {{% spoiler text="2024/05: Had a great time at ICRA2024, Yokohama, Japan ;)" %}}
-        ![me at ICRA 2024](202405_icra2024.jpg "Me at ICRA 2024")
-        {{% /spoiler %}}
-        
-        {{% spoiler text="2024/01: First paper accepted by ICRA2024! 🎉" %}}
-        Our paper "[LIKO: LiDAR, Inertial, and Kinematic Odometry for Bipedal Robots]({{< relref "/publication/zhao-2024/_index.md" >}})" accepted by ICRA 2024 for oral presentation! This is my first academic paper and I cannot wait to go to Yokohama!
-        {{% /spoiler %}}
-    design:
-      columns: '2'
-
-#################################################
   - block: collection
     id: publication
     content:
@@ -70,15 +51,6 @@ sections:
       # Contact (add or remove contact options as necessary)
       email: qingray.zhao[AT]gmail.com
 
-      contact_links:
-        - icon: twitter
-          icon_pack: fab
-          name: DM Me
-          link: 'https://twitter.com/zzqqrrr'
-        - icon: image
-          icon_pack: fas
-          name: My photo blog
-          link: https://mr-zqr.github.io/photo_blog/
     design:
       columns: '2'
 ---

@@ -1,0 +1,24 @@
+<p class="section-note">* Equal contribution. Newest first within each group.</p>
+{{ $papers := where site.RegularPages "Section" "publication" }}
+{{ range slice (dict "key" "lead" "title" "Lead / Co-led by me:") (dict "key" "cooperation" "title" "Cooperations:") }}
+<div class="publication-group" id="{{ .key }}">
+<h3 class="publication-group-title">{{ .title }}</h3>
+<div class="paper-list">
+{{ range (where $papers "Params.publication_group" .key).ByDate.Reverse }}
+{{ $paper := . }}
+{{ $target := .Params.external_link | default .RelPermalink }}
+<article class="paper">
+  <a class="paper-image" href="{{ $target }}" aria-label="{{ .Title }}">
+    {{ with .Resources.GetMatch "featured*" }}{{ $thumb := .Resize "440x" }}<img src="{{ $thumb.RelPermalink }}" width="{{ $thumb.Width }}" height="{{ $thumb.Height }}" alt="{{ $paper.Title }} — research overview" loading="lazy">{{ end }}
+  </a>
+  <div>
+    <h4><a href="{{ $target }}">{{ .Title }}</a></h4>
+    <p class="authors">{{ partial "academic/authors.html" . }}</p>
+    <p class="venue">{{ .Params.publication | markdownify }} · <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time></p>
+    {{ partial "academic/links.html" . }}
+  </div>
+</article>
+{{ end }}
+</div>
+</div>
+{{ end }}

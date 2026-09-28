@@ -12,11 +12,14 @@ authors:
 - Chao Li
 - Yuanxi Zhang
 - Qiang Huang
-date: '2024-04-01'
+date: '2024-05-13'
+publication_group: lead
 publishDate: '2024-05-09T07:48:59.574913Z'
 publication_types:
-- manuscript
-publication: '*arXiv*'
+- paper-conference
+publication: '*2024 IEEE International Conference on Robotics and Automation (ICRA)*'
+publication_short: '*ICRA 2024*'
+doi: '10.1109/ICRA57147.2024.10610222'
 abstract: High-frequency and accurate state estimation is crucial for biped robots.
   This paper presents a tightly-coupled LiDAR-Inertial-Kinematic Odometry (LIKO) for
   biped robot state estimation based on an iterated extended Kalman filter. Beyond
@@ -31,7 +34,7 @@ abstract: High-frequency and accurate state estimation is crucial for biped robo
   quantitative result among other LIO-based methods and biped robot state estimation
   algorithms. The dataset and source code will be available at https://github.com/Mr-Zqr/LIKO.
 links:
-url_pdf: http://arxiv.org/abs/2404.18047
+url_pdf: https://arxiv.org/pdf/2404.18047
 url_code: 'https://github.com/Mr-Zqr/LIKO'
 url_dataset: ''
 ---
