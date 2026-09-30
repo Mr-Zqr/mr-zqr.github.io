@@ -115,7 +115,7 @@ extensions:
 # Leave empty until the site's own embed code is available.
 visitors:
   mapmyvisitors:
-    script_url: 'https://mapmyvisitors.com/globe.js?d=WER-pQcKT2vcSCHETM83e44zg_0X4ebXwXgTyfrDG6s'
+    script_url: 'https://mapmyvisitors.com/map.js?d=GV-z9adqGdV0f7VaJ6E0dzBC_fvfReHNSb_CLMWQn18&cl=ffffff&w=a'
 
 security:
   # Allow frame for embedding speaker notes in slides
