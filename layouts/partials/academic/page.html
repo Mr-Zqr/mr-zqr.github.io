@@ -71,7 +71,10 @@
     <div><h3><a href="{{ .Params.external_link }}">{{ .Title }}</a></h3><p>{{ .Params.summary }}</p><a href="{{ .Params.external_link }}">Code ↗</a></div>
   </article>{{ end }}
 {{ else }}<h1>{{ .Title }}</h1>{{ .Content }}{{ end }}
-<footer>© {{ now.Year }} Qingrui Zhao</footer>
+<footer>
+  {{ partial "academic/visitors.html" . }}
+  <p>© {{ now.Year }} Qingrui Zhao</p>
+</footer>
 </main>
 </div>
 </body>

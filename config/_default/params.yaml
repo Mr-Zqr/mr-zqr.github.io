@@ -111,6 +111,12 @@ extensions:
 
 # Security
 
+# Paste the script src from the widget registered for https://mr-zqr.github.io/.
+# Leave empty until the site's own embed code is available.
+visitors:
+  mapmyvisitors:
+    script_url: 'https://mapmyvisitors.com/globe.js?d=WER-pQcKT2vcSCHETM83e44zg_0X4ebXwXgTyfrDG6s'
+
 security:
   # Allow frame for embedding speaker notes in slides
   allow_frame: true
