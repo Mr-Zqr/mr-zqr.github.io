@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="{{ "/js/theme.js" | relURL }}"></script>
   <title>{{ if not .IsHome }}{{ .Title }} | {{ end }}Qingrui Zhao</title>
   <meta name="description" content="Qingrui Zhao — PhD student at Nanjing University. Research in perception for stable, athletic humanoid locomotion and embodied intelligence.">
   {{ $css := resources.Get "css/academic.css" | minify | fingerprint }}
@@ -11,14 +12,7 @@
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
-<header class="masthead"><nav aria-label="Main navigation">
-  <a class="site-name" href="{{ "/" | relURL }}">Qingrui Zhao</a>
-  <div class="nav-links">
-    <a href="{{ "/" | relURL }}" {{ if .IsHome }}aria-current="page"{{ end }}>About</a>
-    <a href="{{ "/publications/" | relURL }}" {{ if eq .Type "publication" }}aria-current="page"{{ end }}>Publications</a>
-    <a href="{{ "/project/" | relURL }}" {{ if eq .Section "project" }}aria-current="page"{{ end }}>Projects</a>
-  </div>
-</nav></header>
+{{ partial "academic/navigation.html" . }}
 {{ $profile := site.GetPage "/authors/admin" }}
 <div class="site-layout">
 <aside class="profile" aria-label="About Qingrui Zhao">

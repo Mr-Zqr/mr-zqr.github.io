@@ -1,0 +1,10 @@
+<header class="masthead"><nav aria-label="Main navigation">
+  <a class="site-name" href="{{ "/" | relURL }}">Qingrui Zhao</a>
+  <div class="nav-links">
+    <a href="{{ "/" | relURL }}" {{ if .IsHome }}aria-current="page"{{ end }}>About</a>
+    <a href="{{ "/publications/" | relURL }}" {{ if eq .Type "publication" }}aria-current="page"{{ end }}>Publications</a>
+    <a href="{{ "/project/" | relURL }}" {{ if eq .Section "project" }}aria-current="page"{{ end }}>Projects</a>
+    <a href="{{ "/photography/" | relURL }}" {{ if eq .Section "photography" }}aria-current="page"{{ end }}>Photography</a>
+  </div>
+  <button class="theme-toggle" type="button" aria-label="Theme: System. Switch to Light" title="Theme: System — switch to Light"><span class="theme-icon" aria-hidden="true">◐</span><span class="theme-label">System</span></button>
+</nav></header>

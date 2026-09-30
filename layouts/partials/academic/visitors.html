@@ -4,7 +4,7 @@
     {{ if and (eq $script.Scheme "https") (eq $script.Host "mapmyvisitors.com") (in (slice "/map.js" "/globe.js") $script.Path) }}
       <section class="visitor-statistics" aria-label="Visitor statistics">
         <h2>Visitors</h2>
-        {{ if hugo.IsServer }}
+        {{ if and hugo.IsServer (ne (os.Getenv "HUGO_VISITOR_PREVIEW") "1") }}
           <p class="section-note">Visitor statistics are available on the live website.</p>
         {{ else }}
           <div class="visitor-map">
@@ -15,7 +15,8 @@
             {{ end }}
             <script type="text/javascript" id="{{ if eq $script.Path "/globe.js" }}mmvst_globe{{ else }}mapmyvisitors{{ end }}" src="{{ . }}"></script>
           </div>
-          <p class="visitor-attribution">Visitor statistics by <a href="https://mapmyvisitors.com/" target="_blank" rel="noopener">MapMyVisitors</a>.</p>
+          <p class="visitor-attribution"><span class="visitor-count" hidden></span>powered by <a href="https://mapmyvisitors.com/" target="_blank" rel="noopener">MapMyVisitors</a>.</p>
+          <script src="{{ "js/visitor-caption.js" | relURL }}" defer></script>
         {{ end }}
       </section>
     {{ else }}
