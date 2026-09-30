@@ -8,6 +8,11 @@
           <p class="section-note">Visitor statistics are available on the live website.</p>
         {{ else }}
           <div class="visitor-map">
+            {{/* Provide the widget's jQuery dependency locally so its CDN cannot block rendering. */}}
+            {{ if eq $script.Path "/map.js" }}
+              <script src="{{ "vendor/jquery-1.12.4.min.js" | relURL }}"></script>
+              <script>window.vmap_jq = window.jQuery.noConflict(true);</script>
+            {{ end }}
             <script type="text/javascript" id="{{ if eq $script.Path "/globe.js" }}mmvst_globe{{ else }}mapmyvisitors{{ end }}" src="{{ . }}"></script>
           </div>
           <p class="visitor-attribution">Visitor statistics by <a href="https://mapmyvisitors.com/" target="_blank" rel="noopener">MapMyVisitors</a>.</p>
