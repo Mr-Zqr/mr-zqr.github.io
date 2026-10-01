@@ -18,11 +18,11 @@
   <div class="photo-intro"><div><p class="photo-eyebrow">THROUGH MY LENS</p><h1>Photography<span>.</span></h1></div><p class="photo-byline">Selected photographs<br>by Qingrui Zhao</p></div>
   <div class="photo-gallery" aria-label="Photo gallery">
     {{ $photos := site.Data.photography }}
-    {{ range $rowIndex, $row := slice (slice 7) (slice 0 1 9) (slice 4 2 8) (slice 6 5 3) }}
+    {{ range $rowIndex, $row := slice (slice 7) (slice 0 1 2 3 6 8) (slice 4 5 9) }}
     <div class="photo-column{{ if eq $rowIndex 0 }} photo-panorama{{ end }}">
       {{ range $row }}{{ $photo := index $photos . }}
       <a class="photo-tile" href="{{ printf "/photos/%s.webp" $photo.file | relURL }}" aria-label="View {{ $photo.alt }}">
-        <img src="{{ printf "/photos/%s.webp" $photo.file | relURL }}" srcset="{{ printf "/photos/%s-small.webp" $photo.file | relURL }} {{ $photo.smallWidth }}w, {{ printf "/photos/%s.webp" $photo.file | relURL }} {{ $photo.width }}w" sizes="{{ if eq . 7 }}(max-width: 1200px) 100vw, 1200px{{ else }}(max-width: 600px) 100vw, 40vw{{ end }}" width="{{ $photo.width }}" height="{{ $photo.height }}" alt="{{ $photo.alt }}" {{ if eq . 7 }}fetchpriority="high"{{ else }}loading="lazy"{{ end }} decoding="async">
+        <img src="{{ printf "/photos/%s.webp" $photo.file | relURL }}" srcset="{{ printf "/photos/%s-small.webp" $photo.file | relURL }} {{ $photo.smallWidth }}w, {{ printf "/photos/%s.webp" $photo.file | relURL }} {{ $photo.width }}w" sizes="{{ if eq . 7 }}(max-width: 1200px) 100vw, 1200px{{ else }}(max-width: 600px) 100vw, 65vw{{ end }}" width="{{ $photo.width }}" height="{{ $photo.height }}" alt="{{ $photo.alt }}" {{ if eq . 7 }}fetchpriority="high"{{ else }}loading="lazy"{{ end }} decoding="async">
       </a>
       {{ end }}
     </div>
