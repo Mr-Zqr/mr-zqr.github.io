@@ -18,7 +18,7 @@
   <div class="photo-intro"><div><p class="photo-eyebrow">THROUGH MY LENS</p><h1>Photography<span>.</span></h1></div><p class="photo-byline">Selected photographs<br>by Qingrui Zhao</p></div>
   <div class="photo-gallery" aria-label="Photo gallery">
     {{ $photos := site.Data.photography }}
-    {{ range $rowIndex, $row := slice (slice 7) (slice 0 1 3) (slice 4 2) (slice 6 5) }}
+    {{ range $rowIndex, $row := slice (slice 7) (slice 0 1 9) (slice 4 2 8) (slice 6 5 3) }}
     <div class="photo-column{{ if eq $rowIndex 0 }} photo-panorama{{ end }}">
       {{ range $row }}{{ $photo := index $photos . }}
       <a class="photo-tile" href="{{ printf "/photos/%s.webp" $photo.file | relURL }}" aria-label="View {{ $photo.alt }}">
