@@ -42,7 +42,7 @@ education:
 
 internships:
   - role: Algorithm Engineer
-    dates: '2025.4 - present'
+    dates: '2025.4 - 2025.10'
     company: Light Origins
     url: https://www.lightorigins.com/
 
