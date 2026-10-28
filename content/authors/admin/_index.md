@@ -64,7 +64,7 @@ social:
 # Highlight the author in author lists? (true/false)
 highlight_name: true
 ---
-I am currently a Ph.D. student at Nanjing University, supervised by [Prof. Xun Cao](https://cite.nju.edu.cn/People/Faculty/20190621/i5054.html) and [Prof. Xiao-Xiao Long](https://www.xxlong.site/). I also work closely with [Prof. Qiu Shen](https://shenqiu.njucite.cn/).
+I am currently a Ph.D. student at Nanjing University, co-supervised by [Prof. Qiu Shen](https://shenqiu.njucite.cn/) and [Prof. Xiao-Xiao Long](https://www.xxlong.site/), and also advised by [Prof. Xun Cao](https://cite.nju.edu.cn/People/Faculty/20190621/i5054.html).
 
 Previously, I received my master's and bachelor's degrees from Beijing Institute of Technology, where I was advised by [Prof. Qiang Huang](https://scholar.google.com/citations?user=ZG5XE2AAAAAJ&hl=zh-CN).
 
